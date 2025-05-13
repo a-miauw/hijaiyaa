@@ -50,7 +50,7 @@ if img_file_buffer is not None:
         #Suara
         sound_path = f"suara/{pred_label}.mp3"
         if os.path.exists(sound_path):
-            playsound(sound_path)
+            st.audio(sound_path)
     else:
         st.error(f"Akurasi terlalu rendah: {confidence:.2f}%")
         img.save(f"gagal/error_{timestamp}.jpg")
