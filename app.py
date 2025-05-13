@@ -21,6 +21,19 @@ classes = ['ain', 'alif', 'ba', 'dal', 'dhod', 'dzal', 'dzho', 'fa', 'ghoin', 'h
             'haa', 'jim', 'kah', 'kho', 'lam', 'mim', 'nun', 'qof', 'ro', 'shod', 
             'sin', 'syin', 'ta', 'tho', 'tsa', 'wawu', 'ya', 'zain'] 
 
+# Augmentasi dan Normalisasi Data
+datagen = ImageDataGenerator(
+    rescale=1./255,
+    rotation_range=20,
+    width_shift_range=0.1,
+    height_shift_range=0.1,
+    shear_range=0.1,
+    zoom_range=0.1,
+    horizontal_flip=False,
+    fill_mode='nearest',
+    validation_split=0.2
+)
+
 st.set_page_config(page_title="Pengenalan Huruf Hijaiyah", layout="centered")
 st.title("📸 Pengenalan Huruf Hijaiyah ")
 
