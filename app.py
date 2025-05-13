@@ -21,18 +21,6 @@ model = tf.keras.models.load_model('model_hijaiyah.h5')
 classes = ['ain', 'alif', 'ba', 'dal', 'dhod', 'dzal', 'dzho', 'fa', 'ghoin', 'ha',
             'haa', 'jim', 'kah', 'kho', 'lam', 'mim', 'nun', 'qof', 'ro', 'shod', 
             'sin', 'syin', 'ta', 'tho', 'tsa', 'wawu', 'ya', 'zain'] 
-# Augmentasi dan Normalisasi Data
-datagen = ImageDataGenerator(
-    rescale=1./255,              # Normalisasi pixel (0–255 jadi 0–1)
-    rotation_range=20,           # Memutar gambar 
-    width_shift_range=0.1,       # Menggeser gambar ke kanan/kiri max 10% lebar
-    height_shift_range=0.1,      # Menggeser gambar ke atas/bawah max 10% tinggi
-    shear_range=0.1,             # Melakukan transformasi miring 
-    zoom_range=0.1,              # Memperbesar atau memperkecil gambar
-    horizontal_flip=False,       # Tidak membalik gambar secara horizontal (karena huruf bisa jadi berubah makna)
-    fill_mode='nearest',         # Metode mengisi area kosong setelah rotasi/pindah
-    validation_split=0.2
-)
 
 st.set_page_config(page_title="Pengenalan Huruf Hijaiyah", layout="centered")
 st.title("📸 Pengenalan Huruf Hijaiyah ")
