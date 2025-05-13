@@ -22,7 +22,6 @@ model = tf.keras.models.load_model('model_hijaiyah.h5')
 classes = ['ain', 'alif', 'ba', 'dal', 'dhod', 'dzal', 'dzho', 'fa', 'ghoin', 'ha',
             'haa', 'jim', 'kah', 'kho', 'lam', 'mim', 'nun', 'qof', 'ro', 'shod', 
             'sin', 'syin', 'ta', 'tho', 'tsa', 'wawu', 'ya', 'zain'] 
-
 # Augmentasi dan Normalisasi Data
 datagen = ImageDataGenerator(
     rescale=1./255,
