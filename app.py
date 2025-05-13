@@ -4,6 +4,16 @@ import tensorflow as tf
 import os, time
 from PIL import Image
 from playsound import playsound
+import os
+import gdown
+
+# Cek  model 
+MODEL_PATH = "model_hijaiyah.h5"
+if not os.path.exists(MODEL_PATH):
+    # Download dari Google Drive
+    file_id = "19T6eQhsbIuMTNsmNNbcM0M6L7m-MrjAC"  # Ganti dengan ID kamu
+    url = f"https://drive.google.com/uc?id={file_id}"
+    gdown.download(url, MODEL_PATH, quiet=False)
 
 #Load model
 model = tf.keras.models.load_model('model_hijaiyah.h5')
