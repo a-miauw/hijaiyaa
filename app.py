@@ -2,8 +2,7 @@ import streamlit as st
 import numpy as np
 import tensorflow as tf
 import os, time
-from tensorflow.keras.preprocessing.image 
-import ImageDataGenerator
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from PIL import Image
 from playsound import playsound
 import os
